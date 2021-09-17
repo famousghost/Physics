@@ -6,8 +6,8 @@
 #include "Stick.h"
 #include <cstdlib>
 #include <ctime>
-#define POINTS_IN_LINE 5
-#define STICK_SIZE 4
+#define POINTS_IN_LINE 13
+#define STICK_SIZE 12
 #define PI 3.141592653589793238
 
 class MainVerlet
@@ -25,38 +25,24 @@ public:
         sf::Clock clock;
         auto w = l_windowWidth / 2.0f;
         std::vector<ParticleVerlet> points;
-        float beginPosX = 200.0f;
-        float beginPosY = 200.0f;
+        float beginPosX = 300.0f;
+        float beginPosY = 10.0f;
         for (int i = 0; i < POINTS_IN_LINE; ++i)
         {
             for (int j = 0; j < POINTS_IN_LINE; ++j)
             {
                 bool unmoveable = false;
-                if((i == 0 && j == 0) || (i == 0 && j == POINTS_IN_LINE -1))
+                if(i == 0 && j % 2 == 0)
                 {
                     unmoveable = true;
                 }
-                points.emplace_back(beginPosX + 75.0f * j, 
-                                    beginPosY + 75.0f * i,
-                                    beginPosX + 75.0f * j,
-                                    beginPosY + 75.0f * i,
+                points.emplace_back(beginPosX + 20.0f * j, 
+                                    beginPosY + 20.0f * i,
+                                    beginPosX + 20.0f * j,
+                                    beginPosY + 20.0f * i,
                                     unmoveable);
             }
         }
-
-        auto& p = points[0];
-        p.position += Vector2D(-25.0f, 0.0f);
-        p.prevPosition += Vector2D(-25.0f, 0.0f);
-        auto& p1 = points[POINTS_IN_LINE - 1];
-        p1.position += Vector2D(25.0f, 0.0f);
-        p1.prevPosition += Vector2D(25.0f, 0.0f);
-
-        auto& p2 = points[POINTS_IN_LINE * (POINTS_IN_LINE-1)];
-        p2.position += Vector2D(-25.0f, 0.0f);
-        p2.prevPosition += Vector2D(-25.0f, 0.0f);
-        auto& p3 = points[POINTS_IN_LINE * (POINTS_IN_LINE - 1) + (POINTS_IN_LINE-1)];
-        p3.position += Vector2D(25.0f, 0.0f);
-        p3.prevPosition += Vector2D(25.0f, 0.0f);
 
         std::vector<sf::CircleShape> circles;
 
@@ -114,7 +100,7 @@ public:
             }
 
 
-            for(int j = 0; j < 1; ++j)
+            for(int j = 0; j < 4; ++j)
             {
                 for (int i = 0; i < 2 * (STICK_SIZE * POINTS_IN_LINE) + STICK_SIZE; ++i)
                 {
@@ -161,8 +147,7 @@ public:
                 auto& cirlce = circles[i];
                 cirlce.setPosition(p.position.getX(), p.position.getY());
                 cirlce.setRadius(5.0f);
-                m_window.draw(cirlce);
-                for (int i = 0; i < 2 * (STICK_SIZE * POINTS_IN_LINE) + STICK_SIZE; ++i)//4 * (POINTS_IN_LINE * STICK_SIZE) - STICK_SIZE * 2; ++i)
+                for (int i = 0; i < 2 * (STICK_SIZE * POINTS_IN_LINE) + STICK_SIZE; ++i)
                 {
                     auto& pA = sticks[i].pointA->position;
                     auto& pB = sticks[i].pointB->position;
