@@ -1,0 +1,157 @@
+﻿  Vector2D.cpp
+  Stick.cpp
+  ParticleVerlet.cpp
+  Particle.cpp
+  MainVerlet.cpp
+  MainEuler.cpp
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\xmemory0(737): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\xmemory0(857): note: see reference to function template instantiation 'void std::allocator<_Ty>::construct<_Objty,float,float,float,double,float>(_Objty *,float &&,float &&,float &&,double &&,float &&)' being compiled
+          with
+          [
+              _Ty=Particle,
+              _Objty=Particle
+          ]
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\xmemory0(857): note: see reference to function template instantiation 'void std::allocator<_Ty>::construct<_Objty,float,float,float,double,float>(_Objty *,float &&,float &&,float &&,double &&,float &&)' being compiled
+          with
+          [
+              _Ty=Particle,
+              _Objty=Particle
+          ]
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\xmemory0(996): note: see reference to function template instantiation 'void std::allocator_traits<_Alloc>::construct<_Ty,float,float,float,double,float>(std::allocator<_Ty> &,_Objty *,float &&,float &&,float &&,double &&,float &&)' being compiled
+          with
+          [
+              _Alloc=std::allocator<Particle>,
+              _Ty=Particle,
+              _Objty=Particle
+          ]
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\xmemory0(995): note: see reference to function template instantiation 'void std::allocator_traits<_Alloc>::construct<_Ty,float,float,float,double,float>(std::allocator<_Ty> &,_Objty *,float &&,float &&,float &&,double &&,float &&)' being compiled
+          with
+          [
+              _Alloc=std::allocator<Particle>,
+              _Ty=Particle,
+              _Objty=Particle
+          ]
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(930): note: see reference to function template instantiation 'void std::_Wrap_alloc<std::allocator<_Ty>>::construct<_Ty,float,float,float,double,float>(_Ty *,float &&,float &&,float &&,double &&,float &&)' being compiled
+          with
+          [
+              _Ty=Particle
+          ]
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(929): note: see reference to function template instantiation 'void std::_Wrap_alloc<std::allocator<_Ty>>::construct<_Ty,float,float,float,double,float>(_Ty *,float &&,float &&,float &&,double &&,float &&)' being compiled
+          with
+          [
+              _Ty=Particle
+          ]
+  d:\marcin_dyskd\github\verletandeulerintergration\verlet\verlet\maineuler.h(35): note: see reference to function template instantiation 'void std::vector<Particle,std::allocator<_Ty>>::emplace_back<float,float,float,double,float>(float &&,float &&,float &&,double &&,float &&)' being compiled
+          with
+          [
+              _Ty=Particle
+          ]
+  d:\marcin_dyskd\github\verletandeulerintergration\verlet\verlet\maineuler.h(35): note: see reference to function template instantiation 'void std::vector<Particle,std::allocator<_Ty>>::emplace_back<float,float,float,double,float>(float &&,float &&,float &&,double &&,float &&)' being compiled
+          with
+          [
+              _Ty=Particle
+          ]
+  main.cpp
+d:\marcin_dyskd\github\verletandeulerintergration\verlet\verlet\mainverlet.h(102): warning C4018: '<': signed/unsigned mismatch
+d:\marcin_dyskd\github\verletandeulerintergration\verlet\verlet\mainverlet.h(124): warning C4018: '<': signed/unsigned mismatch
+d:\marcin_dyskd\github\verletandeulerintergration\verlet\verlet\mainverlet.h(157): warning C4018: '<': signed/unsigned mismatch
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\xmemory0(737): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\xmemory0(857): note: see reference to function template instantiation 'void std::allocator<_Ty>::construct<_Objty,float,float,float,double,float>(_Objty *,float &&,float &&,float &&,double &&,float &&)' being compiled
+          with
+          [
+              _Ty=Particle,
+              _Objty=Particle
+          ]
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\xmemory0(857): note: see reference to function template instantiation 'void std::allocator<_Ty>::construct<_Objty,float,float,float,double,float>(_Objty *,float &&,float &&,float &&,double &&,float &&)' being compiled
+          with
+          [
+              _Ty=Particle,
+              _Objty=Particle
+          ]
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\xmemory0(996): note: see reference to function template instantiation 'void std::allocator_traits<_Alloc>::construct<_Ty,float,float,float,double,float>(std::allocator<_Ty> &,_Objty *,float &&,float &&,float &&,double &&,float &&)' being compiled
+          with
+          [
+              _Alloc=std::allocator<Particle>,
+              _Ty=Particle,
+              _Objty=Particle
+          ]
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\xmemory0(995): note: see reference to function template instantiation 'void std::allocator_traits<_Alloc>::construct<_Ty,float,float,float,double,float>(std::allocator<_Ty> &,_Objty *,float &&,float &&,float &&,double &&,float &&)' being compiled
+          with
+          [
+              _Alloc=std::allocator<Particle>,
+              _Ty=Particle,
+              _Objty=Particle
+          ]
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(930): note: see reference to function template instantiation 'void std::_Wrap_alloc<std::allocator<_Ty>>::construct<_Ty,float,float,float,double,float>(_Ty *,float &&,float &&,float &&,double &&,float &&)' being compiled
+          with
+          [
+              _Ty=Particle
+          ]
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(929): note: see reference to function template instantiation 'void std::_Wrap_alloc<std::allocator<_Ty>>::construct<_Ty,float,float,float,double,float>(_Ty *,float &&,float &&,float &&,double &&,float &&)' being compiled
+          with
+          [
+              _Ty=Particle
+          ]
+  d:\marcin_dyskd\github\verletandeulerintergration\verlet\verlet\maineuler.h(35): note: see reference to function template instantiation 'void std::vector<Particle,std::allocator<_Ty>>::emplace_back<float,float,float,double,float>(float &&,float &&,float &&,double &&,float &&)' being compiled
+          with
+          [
+              _Ty=Particle
+          ]
+  d:\marcin_dyskd\github\verletandeulerintergration\verlet\verlet\maineuler.h(35): note: see reference to function template instantiation 'void std::vector<Particle,std::allocator<_Ty>>::emplace_back<float,float,float,double,float>(float &&,float &&,float &&,double &&,float &&)' being compiled
+          with
+          [
+              _Ty=Particle
+          ]
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\xmemory0(737): warning C4244: 'argument': conversion from 'float' to 'std::size_t', possible loss of data
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\xmemory0(857): note: see reference to function template instantiation 'void std::allocator<_Ty>::construct<_Objty,float,float>(_Objty *,float &&,float &&)' being compiled
+          with
+          [
+              _Ty=sf::CircleShape,
+              _Objty=sf::CircleShape
+          ]
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\xmemory0(857): note: see reference to function template instantiation 'void std::allocator<_Ty>::construct<_Objty,float,float>(_Objty *,float &&,float &&)' being compiled
+          with
+          [
+              _Ty=sf::CircleShape,
+              _Objty=sf::CircleShape
+          ]
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\xmemory0(996): note: see reference to function template instantiation 'void std::allocator_traits<_Alloc>::construct<_Ty,float,float>(std::allocator<_Ty> &,_Objty *,float &&,float &&)' being compiled
+          with
+          [
+              _Alloc=std::allocator<sf::CircleShape>,
+              _Ty=sf::CircleShape,
+              _Objty=sf::CircleShape
+          ]
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\xmemory0(995): note: see reference to function template instantiation 'void std::allocator_traits<_Alloc>::construct<_Ty,float,float>(std::allocator<_Ty> &,_Objty *,float &&,float &&)' being compiled
+          with
+          [
+              _Alloc=std::allocator<sf::CircleShape>,
+              _Ty=sf::CircleShape,
+              _Objty=sf::CircleShape
+          ]
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(930): note: see reference to function template instantiation 'void std::_Wrap_alloc<std::allocator<_Ty>>::construct<_Ty,float,float>(_Ty *,float &&,float &&)' being compiled
+          with
+          [
+              _Ty=sf::CircleShape
+          ]
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(929): note: see reference to function template instantiation 'void std::_Wrap_alloc<std::allocator<_Ty>>::construct<_Ty,float,float>(_Ty *,float &&,float &&)' being compiled
+          with
+          [
+              _Ty=sf::CircleShape
+          ]
+  d:\marcin_dyskd\github\verletandeulerintergration\verlet\verlet\mainverlet.h(67): note: see reference to function template instantiation 'void std::vector<sf::CircleShape,std::allocator<_Ty>>::emplace_back<float,float>(float &&,float &&)' being compiled
+          with
+          [
+              _Ty=sf::CircleShape
+          ]
+  d:\marcin_dyskd\github\verletandeulerintergration\verlet\verlet\mainverlet.h(67): note: see reference to function template instantiation 'void std::vector<sf::CircleShape,std::allocator<_Ty>>::emplace_back<float,float>(float &&,float &&)' being compiled
+          with
+          [
+              _Ty=sf::CircleShape
+          ]
+  Input.cpp
+  GameWindow.cpp
+  Ball.cpp
+  Generating Code...
+  Verlet.vcxproj -> D:\Marcin_DyskD\GITHUB\VerletAndEulerIntergration\Verlet\Debug\Verlet.exe
+  Verlet.vcxproj -> D:\Marcin_DyskD\GITHUB\VerletAndEulerIntergration\Verlet\Debug\Verlet.pdb (Partial PDB)
