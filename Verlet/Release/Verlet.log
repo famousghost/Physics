@@ -1,7 +1,8 @@
 ﻿  main.cpp
-d:\marcin_dyskd\github\verletandeulerintergration\verlet\verlet\MainVerlet.h(88): warning C4018: '<': signed/unsigned mismatch
-d:\marcin_dyskd\github\verletandeulerintergration\verlet\verlet\MainVerlet.h(110): warning C4018: '<': signed/unsigned mismatch
-d:\marcin_dyskd\github\verletandeulerintergration\verlet\verlet\MainVerlet.h(143): warning C4018: '<': signed/unsigned mismatch
+d:\marcin_dyskd\github\verletandeulerintergration\verlet\verlet\MainVerlet.h(89): warning C4018: '<': signed/unsigned mismatch
+d:\marcin_dyskd\github\verletandeulerintergration\verlet\verlet\MainVerlet.h(100): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+d:\marcin_dyskd\github\verletandeulerintergration\verlet\verlet\MainVerlet.h(123): warning C4018: '<': signed/unsigned mismatch
+d:\marcin_dyskd\github\verletandeulerintergration\verlet\verlet\MainVerlet.h(156): warning C4018: '<': signed/unsigned mismatch
 C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xmemory0(737): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
   C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xmemory0(857): note: see reference to function template instantiation 'void std::allocator<_Ty>::construct<_Objty,float,float,float,double,float>(_Objty *,float &&,float &&,float &&,double &&,float &&)' being compiled
           with
@@ -86,20 +87,20 @@ C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xmemory0(737): wa
           [
               _Ty=sf::CircleShape
           ]
-  d:\marcin_dyskd\github\verletandeulerintergration\verlet\verlet\MainVerlet.h(53): note: see reference to function template instantiation 'void std::vector<sf::CircleShape,std::allocator<_Ty>>::emplace_back<float,float>(float &&,float &&)' being compiled
+  d:\marcin_dyskd\github\verletandeulerintergration\verlet\verlet\MainVerlet.h(54): note: see reference to function template instantiation 'void std::vector<sf::CircleShape,std::allocator<_Ty>>::emplace_back<float,float>(float &&,float &&)' being compiled
           with
           [
               _Ty=sf::CircleShape
           ]
-  d:\marcin_dyskd\github\verletandeulerintergration\verlet\verlet\MainVerlet.h(53): note: see reference to function template instantiation 'void std::vector<sf::CircleShape,std::allocator<_Ty>>::emplace_back<float,float>(float &&,float &&)' being compiled
+  d:\marcin_dyskd\github\verletandeulerintergration\verlet\verlet\MainVerlet.h(54): note: see reference to function template instantiation 'void std::vector<sf::CircleShape,std::allocator<_Ty>>::emplace_back<float,float>(float &&,float &&)' being compiled
           with
           [
               _Ty=sf::CircleShape
           ]
   Generating code
-  2 of 283 functions ( 0.7%) were compiled, the rest were copied from previous compilation.
+  1 of 286 functions ( 0.3%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
+    1 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   Verlet.vcxproj -> D:\Marcin_DyskD\GITHUB\VerletAndEulerIntergration\Verlet\Release\Verlet.exe
   Verlet.vcxproj -> D:\Marcin_DyskD\GITHUB\VerletAndEulerIntergration\Verlet\Release\Verlet.pdb (Full PDB)

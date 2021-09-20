@@ -91,6 +91,12 @@ bool Vector2D::operator==(const Vector2D & v)
     return this->x == v.x && this->y == v.y;
 }
 
+bool Vector2D::operator!=(const Vector2D & v)
+{
+    return !this->operator==(v);
+}
+
+
 float Vector2D::getX()
 {
     return this->x;

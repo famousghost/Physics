@@ -40,6 +40,7 @@ public:
                                     beginPosY + 20.0f * i,
                                     beginPosX + 20.0f * j,
                                     beginPosY + 20.0f * i,
+                                    5.0f,
                                     unmoveable);
             }
         }
@@ -90,10 +91,22 @@ public:
                 auto& p = points[i];
                 if (!p.unmovable)
                 {
+                    auto mousePos = sf::Mouse::getPosition(m_window);
+                    ParticleVerlet mouseP(mousePos.x,
+                                          mousePos.y,
+                                          mousePos.x,
+                                          mousePos.y,
+                                          7.0f,
+                                          true);
                     auto velocity = p.position - p.prevPosition;
-                    Vector2D accel(0.0f, 1.02f);
+                    Vector2D accel(0.0f, 9.81f);
                     accel.setX(0.0f);
                     p.prevPosition = p.position;
+                    auto dir = p.collision(mouseP);
+                    if (dir != Vector2D())
+                    {
+                        velocity += dir;
+                    }
                     p.position += velocity;
                     p.position += accel * l_deltaTime;
                 }
@@ -146,7 +159,7 @@ public:
                 auto& p = points[i];
                 auto& cirlce = circles[i];
                 cirlce.setPosition(p.position.getX(), p.position.getY());
-                cirlce.setRadius(5.0f);
+                cirlce.setRadius(p.radius);
                 for (int i = 0; i < 2 * (STICK_SIZE * POINTS_IN_LINE) + STICK_SIZE; ++i)
                 {
                     auto& pA = sticks[i].pointA->position;

@@ -31,6 +31,8 @@ public:
 
     bool operator==(const Vector2D& v);
 
+    bool operator!=(const Vector2D & v);
+
     float getX();
 
     float getY();
