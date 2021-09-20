@@ -6,19 +6,26 @@
 #include "Stick.h"
 #include <cstdlib>
 #include <ctime>
-#define POINTS_IN_LINE 13
-#define STICK_SIZE 12
+
+#define MOUSE_RADIUS 7.0
+#define POINTS_IN_LINE 20
+#define STICK_SIZE 19
+#define ITERATIONS (2 * (STICK_SIZE * POINTS_IN_LINE) + STICK_SIZE)
 #define PI 3.141592653589793238
+
+constexpr float GRAVITY = 9.81f;
 
 class MainVerlet
 {
 public:
     static void main()
     {
+        sf::ContextSettings settings;
+        settings.antialiasingLevel = 8;
         const unsigned int l_windowWidth = 1280;
         const unsigned int l_windowHeight = 720;
         std::string l_title = "Physics Tutorial";
-        sf::RenderWindow m_window(sf::VideoMode{ l_windowWidth, l_windowHeight }, l_title, sf::Style::Default);
+        sf::RenderWindow m_window(sf::VideoMode{ l_windowWidth, l_windowHeight }, l_title, sf::Style::Default, settings);
         float l_prevTime = 0.0f;
         float l_currentTime = 0.0f;
         float bouncy = 0.9f;
@@ -27,6 +34,9 @@ public:
         std::vector<ParticleVerlet> points;
         float beginPosX = 300.0f;
         float beginPosY = 10.0f;
+
+        std::vector<sf::Vertex> vertices;
+
         for (int i = 0; i < POINTS_IN_LINE; ++i)
         {
             for (int j = 0; j < POINTS_IN_LINE; ++j)
@@ -76,11 +86,20 @@ public:
             }
         }
 
+        for (int i = 0; i < ITERATIONS; ++i)
+        {
+            const auto& pA = sticks[i].pointA;
+            const auto& pB = sticks[i].pointB;
+            vertices.push_back(sf::Vector2f(pA->position.getX() + pA->radius, pA->position.getY() + pA->radius));
+            vertices.push_back(sf::Vector2f(pB->position.getX() + pB->radius, pB->position.getY() + pB->radius));
+        }
+
         float friction = 0.9f;
 
         while (m_window.isOpen())
         {
             Input::buttonsClick(m_window);
+            m_window.clear();
             sf::Time l_elapsed = clock.getElapsedTime();
             l_prevTime = l_currentTime;
             l_currentTime = l_elapsed.asSeconds();
@@ -96,11 +115,10 @@ public:
                                           mousePos.y,
                                           mousePos.x,
                                           mousePos.y,
-                                          7.0f,
+                                          MOUSE_RADIUS,
                                           true);
                     auto velocity = p.position - p.prevPosition;
-                    Vector2D accel(0.0f, 9.81f);
-                    accel.setX(0.0f);
+                    Vector2D accel(0.0f, GRAVITY);
                     p.prevPosition = p.position;
                     auto dir = p.collision(mouseP);
                     if (dir != Vector2D())
@@ -112,12 +130,17 @@ public:
                 }
             }
 
-
             for(int j = 0; j < 4; ++j)
             {
-                for (int i = 0; i < 2 * (STICK_SIZE * POINTS_IN_LINE) + STICK_SIZE; ++i)
+                int k = 0;
+                for (int i = 0; i < ITERATIONS; ++i)
                 {
                     sticks[i].update(l_deltaTime);
+                    const auto& pA = sticks[i].pointA->position;
+                    const auto& pB = sticks[i].pointB->position;
+                    vertices[k].position = sf::Vector2f(pA.getX(), pA.getY());
+                    vertices[k+1].position = sf::Vector2f(pB.getX(), pB.getY());
+                    k+=2;
                 }
 
                 for (int i = 0; i < points.size(); ++i)
@@ -152,29 +175,14 @@ public:
                 }
             }
 
-            m_window.clear();
             for(int i = 0; i < points.size(); ++i)
             {
-
                 auto& p = points[i];
                 auto& cirlce = circles[i];
                 cirlce.setPosition(p.position.getX(), p.position.getY());
                 cirlce.setRadius(p.radius);
-                for (int i = 0; i < 2 * (STICK_SIZE * POINTS_IN_LINE) + STICK_SIZE; ++i)
-                {
-                    auto& pA = sticks[i].pointA->position;
-                    auto& pB = sticks[i].pointB->position;
-                    sf::Vertex line[] =
-                    {
-                        sf::Vertex(sf::Vector2f(pA.getX() + cirlce.getRadius(), 
-                                                pA.getY() + cirlce.getRadius())),
-                        sf::Vertex(sf::Vector2f(pB.getX() + cirlce.getRadius(), 
-                                                pB.getY() + cirlce.getRadius()))
-                    };
-
-                    m_window.draw(line, 2, sf::Lines);
-                }
             }
+            m_window.draw(&vertices[0], vertices.size(), sf::Lines);
             m_window.display();
 
         }

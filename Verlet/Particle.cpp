@@ -16,10 +16,6 @@ void Particle::update(float deltaTime)
 
 Vector2D Particle::collision(const Particle& point)
 {
-    if (this->position == point.position)
-    {
-        return Vector2D();
-    }
     auto distance = this->position - point.position;
     if (distance.getLength() <= (this->radius + point.radius))
     {

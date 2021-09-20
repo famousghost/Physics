@@ -33,9 +33,9 @@ public:
 
     bool operator!=(const Vector2D & v);
 
-    float getX();
+    float getX() const;
 
-    float getY();
+    float getY() const;
 
     void setY(float y);
 

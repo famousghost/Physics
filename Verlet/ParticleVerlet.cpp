@@ -12,10 +12,6 @@ ParticleVerlet::ParticleVerlet(float x, float y, float xPrev, float yPrev, float
 
 Vector2D ParticleVerlet::collision(const ParticleVerlet& point)
 {
-    if (this->position == point.position)
-    {
-        return Vector2D();
-    }
     auto distance = this->position - point.position;
     if (distance.getLength() <= (this->radius + point.radius))
     {
