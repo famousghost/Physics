@@ -5,7 +5,7 @@
 int main()
 {
     //MainEuler::main();
-    //MainVerlet::main();
-    ForwardKinematic::main();
+    MainVerlet::main();
+    //ForwardKinematic::main();
     return 0;
 }
