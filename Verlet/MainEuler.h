@@ -21,7 +21,7 @@ public:
 
         const unsigned int l_windowWidth = 1280;
         const unsigned int l_windowHeight = 720;
-        std::string l_title = "Physics Tutorial";
+        std::string l_title = "euler intergration";
         sf::RenderWindow m_window(sf::VideoMode{ l_windowWidth, l_windowHeight }, l_title, sf::Style::Default);
         float l_prevTime = 0.0f;
         float l_currentTime = 0.0f;

@@ -118,18 +118,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Arm.cpp" />
     <ClCompile Include="Ball.cpp" />
     <ClCompile Include="GameWindow.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="MainEuler.cpp" />
-    <ClCompile Include="MainVerlet.cpp" />
     <ClCompile Include="Particle.cpp" />
     <ClCompile Include="ParticleVerlet.cpp" />
     <ClCompile Include="Stick.cpp" />
     <ClCompile Include="Vector2D.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Arm.h" />
+    <ClInclude Include="ForwardKinematic.h" />
     <ClInclude Include="GameWindow.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="MainEuler.h" />
