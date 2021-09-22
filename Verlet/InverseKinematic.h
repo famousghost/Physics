@@ -2,14 +2,13 @@
 #include <iostream>
 #include "GameWindow.h"
 #include "Input.h"
-#include "Arm.h"
-#include "ForwardKinematicSystem.h"
+#include "InverseKinematicSystem.h"
 #include <cstdlib>
 #include <ctime>
-
 #define PI 3.141592653589793238
+#define LENGTH 100
 
-class ForwardKinematic
+class InverseKinematic
 {
 public:
     static void main()
@@ -18,7 +17,7 @@ public:
         settings.antialiasingLevel = 8;
         const unsigned int l_windowWidth = 1280;
         const unsigned int l_windowHeight = 720;
-        std::string l_title = "Forward kinematic";
+        std::string l_title = "Inverse kinematic";
         sf::RenderWindow m_window(sf::VideoMode{ l_windowWidth, l_windowHeight }, l_title, sf::Style::Default, settings);
         float l_prevTime = 0.0f;
         float l_currentTime = 0.0f;
@@ -26,13 +25,14 @@ public:
 
         float friction = 0.9f;
 
-        ForwardKinematicSystem fksystem(Vector2D(l_windowWidth / 2, l_windowHeight / 2));
-
-        fksystem.addArm(100.0f);
-        fksystem.addArm(100.0f);
-        fksystem.addArm(100.0f);
-
         float angle = 90.0f;
+
+        InverseKinematicSystem ivksystem(Vector2D(l_windowWidth / 2.0f, l_windowHeight / 2.0f));
+
+        for(int i = 0; i < LENGTH; ++i)
+        {
+            ivksystem.addArm(1000.0f / LENGTH);
+        }
 
         while (m_window.isOpen())
         {
@@ -42,23 +42,16 @@ public:
             l_prevTime = l_currentTime;
             l_currentTime = l_elapsed.asSeconds();
             float l_deltaTime = l_currentTime - l_prevTime;
-
-            angle += 80.0f * l_deltaTime;
-
-            fksystem.rotateArm(0, std::sin(toRadians(angle)) * 1.3f);
-            fksystem.rotateArm(1, std::sin(toRadians(angle * 1.2f)) * -0.9f);
-            fksystem.rotateArm(2, std::sin(toRadians(angle * 0.73f)) * 1.12f);
-            fksystem.update();
-
-            auto& arms = fksystem.getArms();
-
-            for(const auto& arm : arms)
+            auto mousePos = sf::Mouse::getPosition(m_window);
+            ivksystem.drag(Vector2D(mousePos.x, mousePos.y));
+            for(const auto& arm : ivksystem.getArms())
             {
                 drawLine(m_window, *arm);
             }
 
-            m_window.display();
+            angle += 80.0f * l_deltaTime;
 
+            m_window.display();
         }
     }
 
@@ -67,7 +60,7 @@ public:
         sf::Vertex line[2] =
         {
             sf::Vertex(sf::Vector2f(arm.getPos().getX(), arm.getPos().getY())),
-            sf::Vertex(sf::Vector2f(arm.getEnd().getX(), arm.getEnd().getY())),
+            sf::Vertex(sf::Vector2f(arm.getEndIK().getX(), arm.getEndIK().getY())),
         };
         window.draw(line, 2, sf::Lines);
     }

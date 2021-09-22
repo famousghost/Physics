@@ -35,6 +35,18 @@ void Vector2D::setAngle(float angle)
     this->y = sin(angle) * length;
 }
 
+void Vector2D::normalize()
+{
+    auto len = getLength();
+    x /= len;
+    y /= len;
+}
+
+float Vector2D::dotProduct(Vector2D v)
+{
+    return this->x * v.x + this->y * v.y;
+}
+
 Vector2D Vector2D::operator+(const Vector2D & v)
 {
     return Vector2D(this->x + v.x, this->y + v.y);

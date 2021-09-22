@@ -120,8 +120,10 @@
   <ItemGroup>
     <ClCompile Include="Arm.cpp" />
     <ClCompile Include="Ball.cpp" />
+    <ClCompile Include="ForwardKinematicSystem.cpp" />
     <ClCompile Include="GameWindow.cpp" />
     <ClCompile Include="Input.cpp" />
+    <ClCompile Include="InverseKinematicSystem.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Particle.cpp" />
     <ClCompile Include="ParticleVerlet.cpp" />
@@ -131,8 +133,11 @@
   <ItemGroup>
     <ClInclude Include="Arm.h" />
     <ClInclude Include="ForwardKinematic.h" />
+    <ClInclude Include="ForwardKinematicSystem.h" />
     <ClInclude Include="GameWindow.h" />
     <ClInclude Include="Input.h" />
+    <ClInclude Include="InverseKinematic.h" />
+    <ClInclude Include="InverseKinematicSystem.h" />
     <ClInclude Include="MainEuler.h" />
     <ClInclude Include="MainVerlet.h" />
     <ClInclude Include="Particle.h" />

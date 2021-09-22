@@ -10,7 +10,17 @@ public:
 
     Vector2D getEnd() const;
 
+    void pointAt(Vector2D position);
+
+    void drag(Vector2D position);
+
+    Vector2D getEndIK() const;
+
     void setAngle(float angle);
+
+    void setParent(Arm * arm);
+
+    Arm * getParent();
 
     void setLength(float length);
 

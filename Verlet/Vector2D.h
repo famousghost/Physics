@@ -13,6 +13,10 @@ public:
 
     void setAngle(float angle);
 
+    void normalize();
+
+    float dotProduct(Vector2D v);
+
     Vector2D operator+(const Vector2D& v);
 
     Vector2D operator-(const Vector2D & v);

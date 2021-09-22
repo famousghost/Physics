@@ -42,6 +42,12 @@
     <ClCompile Include="Arm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ForwardKinematicSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InverseKinematicSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameWindow.h">
@@ -72,6 +78,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Arm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ForwardKinematicSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InverseKinematic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InverseKinematicSystem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
