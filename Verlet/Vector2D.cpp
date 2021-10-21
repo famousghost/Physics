@@ -11,7 +11,7 @@ Vector2D::Vector2D(float x, float y)
 {
 }
 
-float Vector2D::getLength()
+float Vector2D::getLength() const
 {
     return sqrt(this->x * this->x + this->y * this->y);
 }
@@ -42,7 +42,13 @@ void Vector2D::normalize()
     y /= len;
 }
 
-float Vector2D::dotProduct(Vector2D v)
+Vector2D Vector2D::getNormalized() const
+{
+    auto len = getLength();
+    return Vector2D(x / len, y / len);
+}
+
+float Vector2D::dotProduct(Vector2D v) const
 {
     return this->x * v.x + this->y * v.y;
 }

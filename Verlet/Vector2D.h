@@ -5,7 +5,7 @@ public:
     Vector2D();
     Vector2D(float x, float y);
 
-    float getLength();
+    float getLength() const;
 
     float getAngle();
 
@@ -15,7 +15,9 @@ public:
 
     void normalize();
 
-    float dotProduct(Vector2D v);
+    Vector2D getNormalized() const;
+
+    float dotProduct(Vector2D v) const;
 
     Vector2D operator+(const Vector2D& v);
 
@@ -49,4 +51,3 @@ private:
     float x;
     float y;
 };
-

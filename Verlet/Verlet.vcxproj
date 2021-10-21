@@ -124,25 +124,35 @@
     <ClCompile Include="GameWindow.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="InverseKinematicSystem.cpp" />
+    <ClCompile Include="Line.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Particle.cpp" />
     <ClCompile Include="ParticleVerlet.cpp" />
     <ClCompile Include="Stick.cpp" />
+    <ClCompile Include="Utilities.cpp" />
     <ClCompile Include="Vector2D.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Arm.h" />
+    <ClInclude Include="Bezier.h" />
+    <ClInclude Include="Circle.h" />
     <ClInclude Include="ForwardKinematic.h" />
     <ClInclude Include="ForwardKinematicSystem.h" />
     <ClInclude Include="GameWindow.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="InverseKinematic.h" />
     <ClInclude Include="InverseKinematicSystem.h" />
+    <ClInclude Include="Line.h" />
+    <ClInclude Include="MainBezier.h" />
     <ClInclude Include="MainEuler.h" />
     <ClInclude Include="MainVerlet.h" />
     <ClInclude Include="Particle.h" />
     <ClInclude Include="ParticleVerlet.h" />
+    <ClInclude Include="Ray.h" />
+    <ClInclude Include="SmallFunctionsTest.h" />
+    <ClInclude Include="SquareAABB.h" />
     <ClInclude Include="Stick.h" />
+    <ClInclude Include="Utilities.h" />
     <ClInclude Include="Vector2D.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
