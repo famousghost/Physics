@@ -4,6 +4,7 @@
 #include "InverseKinematic.h"
 #include "SmallFunctionsTest.h"
 #include "MainBezier.h"
+#include "MainCollisions.h"
 
 int main()
 {
@@ -13,5 +14,6 @@ int main()
     //InverseKinematic::main();
     //SmallFunctionsTest::main();
     //MainBezier::main();
+    //MainCollisions::main();
     return 0;
 }

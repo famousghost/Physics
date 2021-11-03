@@ -71,9 +71,6 @@
     <ClInclude Include="Particle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ParticleVerlet.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Stick.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -117,6 +114,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Bezier.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MainCollisions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleVerlet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OBB.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

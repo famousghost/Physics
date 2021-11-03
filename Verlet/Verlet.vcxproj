@@ -144,8 +144,10 @@
     <ClInclude Include="InverseKinematicSystem.h" />
     <ClInclude Include="Line.h" />
     <ClInclude Include="MainBezier.h" />
+    <ClInclude Include="MainCollisions.h" />
     <ClInclude Include="MainEuler.h" />
     <ClInclude Include="MainVerlet.h" />
+    <ClInclude Include="OBB.h" />
     <ClInclude Include="Particle.h" />
     <ClInclude Include="ParticleVerlet.h" />
     <ClInclude Include="Ray.h" />

@@ -63,6 +63,11 @@ Vector2D Vector2D::operator-(const Vector2D& v)
     return Vector2D(this->x - v.x, this->y - v.y);
 }
 
+Vector2D Vector2D::operator*(const Vector2D & v)
+{
+    return Vector2D(this->x * v.x, this->y * v.y);
+}
+
 Vector2D Vector2D::operator*(float value)
 {
     return Vector2D(this->x * value, this->y * value);

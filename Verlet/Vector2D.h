@@ -23,6 +23,8 @@ public:
 
     Vector2D operator-(const Vector2D & v);
 
+    Vector2D operator*(const Vector2D& v);
+
     Vector2D operator*(float value);
 
     Vector2D operator/(float value);

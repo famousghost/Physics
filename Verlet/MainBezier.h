@@ -63,7 +63,7 @@ public:
                                                       points[1].position, 
                                                       points[2].position,
                                                       points[3].position, 
-                                                      50);
+                                                      100);
             
             for(int i = 0; i < pointsArray.size()-1; ++i)
             {

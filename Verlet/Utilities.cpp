@@ -30,6 +30,12 @@ Vector2D Utilities::castVectorToVector(const Vector2D & vec1, const Vector2D& ve
     return vec2Normalized * vec1.dotProduct(vec2Normalized);
 }
 
+float Utilities::castVectorToVectorLength(const Vector2D & vec1, const Vector2D& vec2)
+{
+    Vector2D vec2Normalized = vec2.getNormalized();
+    return vec1.dotProduct(vec2Normalized);
+}
+
 Vector2D Utilities::reflect(const Vector2D& vec, const Vector2D& normal)
 {
     Vector2D vecBuf = vec;
@@ -47,3 +53,21 @@ void Utilities::drag(Circle & circle, Vector2D mousePoint)
         }
     }
 }
+
+float Utilities::toRadians(float angle)
+{
+    return angle * PI / 180.0f;
+}
+
+float Utilities::toDegrees(float radians)
+{
+    return radians * 180.0f / PI;
+}
+
+Vector2D Utilities::rotate(const Vector2D & vec, float angle)
+{
+    float radians = toRadians(angle);
+    return Vector2D(std::cos(radians) * vec.getX() - std::sin(radians) * vec.getY(),
+                    std::sin(radians) * vec.getX() + std::cos(radians) * vec.getY());
+}
+
