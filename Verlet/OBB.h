@@ -110,9 +110,9 @@ public:
 
     void setVert(float rads, int i, int j)
     {
-        verts[i].setX((std::cos(rads) * vertices[j].getX() - std::sin(rads) * vertices[j].getY()));
-        verts[i].setY((std::sin(rads) * vertices[j].getX() + std::cos(rads) * vertices[j].getY()));
-        verts[i] = verts[i] * size + pos;
+        verts[i].setX((size.getX() * std::cos(rads) * vertices[j].getX() - size.getY() * std::sin(rads) * vertices[j].getY()));
+        verts[i].setY((size.getX() * std::sin(rads) * vertices[j].getX() + size.getY() * std::cos(rads) * vertices[j].getY()));
+        verts[i] += pos;
     }
 
     Vector2D verts[6];

@@ -25,9 +25,9 @@ public:
         float l_currentTime = 0.0f;
         sf::Clock clock;
 
-        OBB square1(Vector2D(l_windowWidth/2.0f, l_windowHeight/2.0f), Vector2D(50.0f, 50.0f));
+        OBB square1(Vector2D(l_windowWidth/2.0f, l_windowHeight/2.0f), Vector2D(100.0f, 50.0f));
 
-        OBB square2(Vector2D(l_windowWidth / 2.0f + 150.0f, l_windowHeight / 2.0f + 150.0f) , Vector2D(50.0f, 50.0f));
+        OBB square2(Vector2D(l_windowWidth / 2.0f + 150.0f, l_windowHeight / 2.0f + 150.0f) , Vector2D(120.0f, 50.0f));
 
         sf::RectangleShape rect;
 
@@ -60,12 +60,13 @@ public:
 
             if (Input::s_rotateLeft)
             {
-                t2 -= 10.0f * l_deltaTime;
+                t2 -= 1000.0f * l_deltaTime;
             }
             if (Input::s_rotateRight)
             {
-                t2 += 10.0f * l_deltaTime;
+                t2 += 1000.0f * l_deltaTime;
             }
+
             square1.rotate(t2);
 
             auto vertices = prepareVertices(square1, color);
@@ -75,7 +76,7 @@ public:
             auto mousePos = sf::Mouse::getPosition(m_window);
             square2.update(Vector2D(mousePos.x, mousePos.y), 0.0f);
 
-            square2.rotate(32.0f);
+            square2.rotate(0.0f);
 
             vertices = prepareVertices(square2, color);
 

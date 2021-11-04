@@ -49,6 +49,10 @@ public:
 
     void setX(float x);
 
+    void updateX(float x);
+
+    void updateY(float y);
+
 private:
     float x;
     float y;

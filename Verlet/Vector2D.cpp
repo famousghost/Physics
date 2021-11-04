@@ -140,3 +140,13 @@ void Vector2D::setX(float x)
     this->x = x;
 }
 
+void Vector2D::updateX(float x)
+{
+    this->x += x;
+}
+
+void Vector2D::updateY(float y)
+{
+    this->y += y;
+}
+
