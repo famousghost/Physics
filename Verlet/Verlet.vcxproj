@@ -136,6 +136,7 @@
     <ClInclude Include="Arm.h" />
     <ClInclude Include="Bezier.h" />
     <ClInclude Include="Circle.h" />
+    <ClInclude Include="DistancePointAndLine.h" />
     <ClInclude Include="ForwardKinematic.h" />
     <ClInclude Include="ForwardKinematicSystem.h" />
     <ClInclude Include="GameWindow.h" />
@@ -146,6 +147,7 @@
     <ClInclude Include="MainBezier.h" />
     <ClInclude Include="MainCollisions.h" />
     <ClInclude Include="MainEuler.h" />
+    <ClInclude Include="MainTest.h" />
     <ClInclude Include="MainVerlet.h" />
     <ClInclude Include="OBB.h" />
     <ClInclude Include="Particle.h" />

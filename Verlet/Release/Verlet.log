@@ -18,7 +18,14 @@ d:\marcin_dyskd\github\verletandeulerintergration\verlet\verlet\SmallFunctionsTe
 d:\marcin_dyskd\github\verletandeulerintergration\verlet\verlet\SmallFunctionsTest.h(161): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 d:\marcin_dyskd\github\verletandeulerintergration\verlet\verlet\MainBezier.h(52): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 d:\marcin_dyskd\github\verletandeulerintergration\verlet\verlet\MainBezier.h(68): warning C4018: '<': signed/unsigned mismatch
-d:\marcin_dyskd\github\verletandeulerintergration\verlet\verlet\MainCollisions.h(77): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+d:\marcin_dyskd\github\verletandeulerintergration\verlet\verlet\MainCollisions.h(75): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+d:\marcin_dyskd\github\verletandeulerintergration\verlet\verlet\MainTest.h(147): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+d:\marcin_dyskd\github\verletandeulerintergration\verlet\verlet\DistancePointAndLine.h(9): warning C4005: 'PI': macro redefinition
+  d:\marcin_dyskd\github\verletandeulerintergration\verlet\verlet\Utilities.h(4): note: see previous definition of 'PI'
+d:\marcin_dyskd\github\verletandeulerintergration\verlet\verlet\DistancePointAndLine.h(30): warning C4244: 'argument': conversion from 'const unsigned int' to 'float', possible loss of data
+d:\marcin_dyskd\github\verletandeulerintergration\verlet\verlet\DistancePointAndLine.h(46): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+d:\marcin_dyskd\github\verletandeulerintergration\verlet\verlet\DistancePointAndLine.h(103): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+d:\marcin_dyskd\github\verletandeulerintergration\verlet\verlet\DistancePointAndLine.h(108): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
 C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xmemory0(737): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
   C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xmemory0(857): note: see reference to function template instantiation 'void std::allocator<_Ty>::construct<_Objty,float,float,float,double,float>(_Objty *,float &&,float &&,float &&,double &&,float &&)' being compiled
           with
@@ -114,7 +121,7 @@ C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xmemory0(737): wa
               _Ty=sf::CircleShape
           ]
   Generating code
-  1 of 186 functions ( 0.5%) were compiled, the rest were copied from previous compilation.
+  1 of 92 functions ( 1.1%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
     1 functions had inline decision re-evaluated but remain unchanged
   Finished generating code

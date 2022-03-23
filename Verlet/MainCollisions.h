@@ -15,8 +15,6 @@ public:
         int points = 0;
         int currentAmount = 0;
 
-
-
         const unsigned int l_windowWidth = 1280;
         const unsigned int l_windowHeight = 720;
         std::string l_title = "Collision Detection";
@@ -60,11 +58,11 @@ public:
 
             if (Input::s_rotateLeft)
             {
-                t2 -= 1000.0f * l_deltaTime;
+                t2 -= 100.0f * l_deltaTime;
             }
             if (Input::s_rotateRight)
             {
-                t2 += 1000.0f * l_deltaTime;
+                t2 += 100.0f * l_deltaTime;
             }
 
             square1.rotate(t2);
@@ -76,7 +74,7 @@ public:
             auto mousePos = sf::Mouse::getPosition(m_window);
             square2.update(Vector2D(mousePos.x, mousePos.y), 0.0f);
 
-            square2.rotate(0.0f);
+            square2.rotate(-t2);
 
             vertices = prepareVertices(square2, color);
 

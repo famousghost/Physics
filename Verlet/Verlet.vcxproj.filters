@@ -125,5 +125,11 @@
     <ClInclude Include="OBB.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="MainTest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DistancePointAndLine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
