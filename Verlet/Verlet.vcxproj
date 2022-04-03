@@ -144,6 +144,7 @@
     <ClInclude Include="InverseKinematic.h" />
     <ClInclude Include="InverseKinematicSystem.h" />
     <ClInclude Include="Line.h" />
+    <ClInclude Include="LineIntersection.h" />
     <ClInclude Include="MainBezier.h" />
     <ClInclude Include="MainCollisions.h" />
     <ClInclude Include="MainEuler.h" />
