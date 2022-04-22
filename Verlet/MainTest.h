@@ -183,12 +183,36 @@ public:
                 sf::Vector2f(v.x, 0.0f)
             };
 
+            vec2 vl = vert - lightPos;
+            vec2 norm = vec2(vert.x, 0.0f) - vert;
+
+            vec2 reflVl = vl - (norm * operations::dot(vl, norm) / operations::dot(norm, norm))* 2.0f + vert;
+
+
+            sf::Vector2f rvl = sf::Vector2f(reflVl.x, reflVl.y);
+            sf::Vertex reflVec[2]
+            {
+                v,
+                rvl 
+            };
+
             m_window.draw(vertex, 2, sf::Lines);
             m_window.draw(normal, 2, sf::Lines);
+            m_window.draw(reflVec, 2, sf::Lines);
 
             m_window.display();
 
         }
+    }
+
+    static void drawLine(sf::RenderWindow& window, const Vector2D& a, const Vector2D& b)
+    {
+        sf::Vertex line[2] =
+        {
+            sf::Vertex(sf::Vector2f(a.getX(), a.getY())),
+            sf::Vertex(sf::Vector2f(b.getX(), b.getY())),
+        };
+        window.draw(line, 2, sf::Lines);
     }
 };
 

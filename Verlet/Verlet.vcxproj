@@ -148,6 +148,7 @@
     <ClInclude Include="MainBezier.h" />
     <ClInclude Include="MainCollisions.h" />
     <ClInclude Include="MainEuler.h" />
+    <ClInclude Include="MainRefraction.h" />
     <ClInclude Include="MainTest.h" />
     <ClInclude Include="MainVerlet.h" />
     <ClInclude Include="OBB.h" />
