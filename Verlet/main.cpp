@@ -13,7 +13,7 @@
 int main()
 {
     //MainEuler::main();
-    //MainVerlet::main();
+    MainVerlet::main();
     //ForwardKinematic::main();
     //InverseKinematic::main();
     //SmallFunctionsTest::main();
@@ -22,6 +22,6 @@ int main()
     //MainTest::main();
     //DistancePointAndLine::main();
     //LineIntersection::main();
-    MainRefraction::main();
+    //MainRefraction::main();
     return 0;
 }
